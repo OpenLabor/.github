@@ -1,70 +1,168 @@
 <h1 align="center">
   <br>
-  <img src="https://labor.so/favicon.ico" alt="Labor" width="60">
-  <br>
   OpenLabor
   <br>
 </h1>
 
 <p align="center">
-  <strong>Hire AI employees that actually work.</strong>
-  <br>
-  <a href="https://labor.so">labor.so</a>
+  <strong>Open source AI employees you can hire, customize, and put to work.</strong>
 </p>
 
 <p align="center">
-  <a href="https://labor.so">Website</a> &bull;
-  <a href="https://github.com/OpenLabor/community">Community</a> &bull;
-  <a href="https://t.me/LaborCTO_bot">Try on Telegram</a>
+  <a href="https://openlabor.ai">openlabor.ai</a> &bull;
+  <a href="https://labor.so">labor.so</a> &bull;
+  <a href="https://github.com/OpenLabor/community">community</a>
 </p>
 
 ---
 
-### What is Labor?
+## The idea
 
-Labor is a platform where you hire AI employees — not chatbots, not copilots — **employees**. Each one has a role, skills, and personality. They connect to Telegram, Slack, WhatsApp, and email. They run scheduled tasks. They cost a fraction of a human hire.
+Most AI tools are chatbots. OpenLabor is different — we build **AI employees**. Each one has a role, a personality, skills, and missions. They work on a schedule. They connect to your platforms. They cost a fraction of a human hire.
 
-**Think of it as payroll for AI.**
+Everything that defines an AI employee is open source and lives as simple `.md` files in the **[community repo](https://github.com/OpenLabor/community)**. Anyone can create a new role, add skills, or design missions.
 
-### How it works
+## How AI employees are defined
 
+Every employee is built from three Markdown files:
+
+### `EMPLOYEE.md` — Who they are
+
+Defines the role, personality, and behavior. This is their identity.
+
+```markdown
+You are {{name}}, a CMO AI employee.
+
+## Personality
+You are a creative, data-driven marketing leader. You balance brand
+storytelling with measurable results. You speak in clear, engaging
+language and always tie strategy back to business outcomes.
+
+## Behavior Guidelines
+- Lead with the benefit, not the feature
+- Always suggest A/B testing for major campaigns
+- Provide ready-to-publish copy when asked, not just outlines
+- Adapt tone and content to the target platform
+
+## Boundaries
+- You do not post to social media directly unless connected to a platform
+- You defer budget decisions to the user while providing ROI estimates
 ```
-1. Browse the catalog    Pick a role: CTO, CMO, SDR, Support, Writer
-2. Hire & customize      Give them a name, personality, and skills
-3. Connect platforms     Telegram, Slack, WhatsApp, Discord, Email
-4. Set tasks             Schedule recurring work with natural language
-5. Pay per usage         Credits-based billing, starting free
+
+### `SKILL.md` — What they can do
+
+Structured instructions that give an employee specialized capabilities. Skills include workflows, scoring frameworks, API integrations, and decision logic.
+
+```markdown
+---
+name: domain-advisor
+triggers: ["check domain", "find domain", "suggest domain"]
+---
+
+# Domain Advisor
+Checks availability, brainstorms names, and scores every option
+across 7 business dimensions.
+
+## Workflow
+1. Parse input for domain names or business description
+2. Check availability via API
+3. Score each domain on memorability, length, SEO, brandability...
+4. Rank and present with reasoning
+
+## API
+GET /check?domains=example.com,example.ai
 ```
 
-### Roles available
+### `MISSION.md` — What they do on autopilot
 
-| Role | What they do |
-|------|-------------|
-| **CTO** | Technical architecture, code review, system design |
-| **CMO** | Marketing strategy, content planning, campaign management |
-| **SDR** | Lead generation, outreach, pipeline management |
-| **Support** | Customer support, ticket handling, FAQ automation |
-| **Writer** | Blog posts, social media, copywriting, newsletters |
+Recurring tasks that run on a schedule — the real work.
 
-### Open source
+```markdown
+name: Daily Social Content Engine
+schedule: Daily at 9:00 AM
+role: CMO
+estimatedCredits: 8
 
-We believe in building in the open. Our [community repo](https://github.com/OpenLabor/community) contains open source skills, documentation, and resources for extending the Labor platform.
+## Steps
+1. Review yesterday's post performance metrics
+2. Identify trending topics in our industry
+3. Draft platform-native posts for X, LinkedIn, and Instagram
+4. Apply hashtag strategy and schedule at optimal times
+5. Log results for weekly analytics review
+```
 
-### Tech stack
+## What they actually do
 
-- **Frontend** &mdash; React, Vite, shadcn/ui, Tailwind
-- **API** &mdash; Hono, TypeScript, better-sqlite3
-- **AI Engine** &mdash; [OpenClaw](https://openclaw.com) for agent orchestration
-- **Auth** &mdash; Clerk
-- **Billing** &mdash; Stripe (subscriptions + usage-based)
-- **Channels** &mdash; Telegram, Slack, WhatsApp, Discord, Email
+These aren't toy demos. Here's a sample of real missions running on the platform:
 
-### Get started
+| Mission | Role | Schedule | What happens |
+|---------|------|----------|-------------|
+| **Daily Outbound Prospecting** | SDR | Every morning | Researches prospects, writes personalized cold emails, schedules follow-ups |
+| **Daily Code Review Sweep** | CTO | Every morning | Reviews all open PRs for bugs, security issues, and style violations |
+| **Campaign Performance Review** | CMO | Weekly | Pulls data from all active campaigns, ranks by ROI, drafts executive summary |
+| **Pipeline Follow-Up Sweep** | SDR | Daily | Re-engages stale deals with fresh intel and personalized outreach |
+| **Brand Mention Monitor** | CMO | Every 6 hours | Scans social platforms for mentions, categorizes sentiment, drafts responses |
+| **Weekly Security Audit** | CTO | Weekly | Scans codebase for vulnerabilities, checks dependencies, reports findings |
 
-Try hiring your first AI employee for free at **[labor.so](https://labor.so)**, or chat with one directly on Telegram: [@LaborCTO_bot](https://t.me/LaborCTO_bot)
+## Available roles
+
+| Role | Department | What they do |
+|------|-----------|-------------|
+| **CTO** | Engineering | Code review, architecture, deployments, security audits, technical docs |
+| **CMO** | Marketing | Social media, email campaigns, SEO, content strategy, brand management |
+| **SDR** | Sales | Cold outreach, lead qualification, pipeline management, follow-up sequences |
+| **Support** | Customer Success | Ticket handling, FAQ automation, customer onboarding, escalation management |
+| **Writer** | Content | Blog posts, newsletters, social copy, landing pages, case studies |
+| **Designer** | Design | UI/UX, brand assets, social graphics, presentations |
+| **Data Analyst** | Data | Reporting dashboards, market research, business intelligence |
+| **COO** | Operations | Workflow automation, process optimization, KPI tracking |
+
+## Contributing
+
+The community repo is the heart of OpenLabor. Every role, skill, and mission is a Markdown file — no code required to contribute.
+
+### Add a new skill
+
+1. Fork [OpenLabor/community](https://github.com/OpenLabor/community)
+2. Create `skills/your-skill-name/SKILL.md`
+3. Follow the format: triggers, workflow steps, examples
+4. Test it with any AI agent, then submit a PR
+
+### Add a new mission
+
+1. Create `missions/your-mission-name/MISSION.md`
+2. Define the schedule, role, steps, and expected output
+3. Submit a PR
+
+### Improve an existing role
+
+Found a better personality prompt? A missing behavior guideline? An edge case? Open a PR against the existing `EMPLOYEE.md` for that role.
+
+### Ideas for contributions
+
+- **SEO Auditor** skill — analyze URLs for SEO issues and opportunities
+- **Competitor Analyzer** skill — research and compare competitors from public data
+- **Pricing Advisor** skill — evaluate SaaS pricing strategies
+- **Weekly Newsletter** mission — curate and write a weekly industry newsletter
+- **Customer Feedback Digest** mission — summarize support tickets into product insights
+- New roles: **HR Manager**, **Product Manager**, **Recruiter**
+
+No contribution is too small. Fix a typo in a personality prompt. Add a step to a mission. Suggest a new trigger for a skill. It all helps.
+
+## Built on OpenClaw
+
+OpenLabor is powered by **[OpenClaw](https://openclaw.com)** — the open source AI agent engine. OpenClaw handles agent orchestration, multi-channel messaging (Telegram, Slack, WhatsApp, Discord, email), scheduled task execution, and real-time streaming. It's what makes it possible to give each AI employee persistent memory, platform connections, and autonomous task execution.
+
+If you're building AI agents, check out OpenClaw — it's a remarkable project.
+
+## License
+
+Community contributions are MIT licensed. Use them however you want.
 
 ---
 
 <p align="center">
-  <sub>Built by <a href="https://github.com/yoanndefay">@yoanndefay</a></sub>
+  <a href="https://openlabor.ai">openlabor.ai</a> &bull; <a href="https://labor.so">labor.so</a> &bull; <a href="https://github.com/OpenLabor/community">community</a>
+  <br><br>
+  <sub>Built by <a href="https://github.com/yoanndefay">@yoanndefay</a> and the open source community</sub>
 </p>
