@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://openlabor.ai">openlabor.ai</a> &bull;
   <a href="https://labor.so">labor.so</a> &bull;
-  <a href="https://github.com/OpenLabor/community">community</a>
+  <a href="https://github.com/OpenLabor/openlabor">openlabor</a>
 </p>
 
 ---
@@ -22,7 +22,7 @@ Most AI tools give you a personal assistant — a chatbot that answers your ques
 
 **[OpenClaw](https://openclaw.com)** is an incredible open source engine for building personal AI assistants. We loved it so much, we built OpenLabor on top of it — extending the concept from *assistant* to *employee*. OpenClaw gives you a smart helper. OpenLabor gives you a team.
 
-Everything that defines an AI employee is open source and lives as simple `.md` files in the **[community repo](https://github.com/OpenLabor/community)**. Anyone can create new roles, add skills, or design missions.
+Everything that defines an AI employee is open source and lives as simple `.md` files in the **[openlabor repo](https://github.com/OpenLabor/openlabor)**. Anyone can create new roles, add skills, or design missions.
 
 ---
 
@@ -42,9 +42,9 @@ We manage the infrastructure, the AI orchestration, the platform connections, an
 
 ---
 
-## The community repo
+## The openlabor repo
 
-The **[community repo](https://github.com/OpenLabor/community)** is the heart of OpenLabor. It contains every employee definition, skill, and mission — all as Markdown files.
+The **[openlabor repo](https://github.com/OpenLabor/openlabor)** is the heart of OpenLabor. It contains every employee definition, skill, and mission — all as Markdown files.
 
 ### Three types of files
 
@@ -103,7 +103,7 @@ Contributing is easy. Everything is a Markdown file — no code, no local setup,
 
 ### The fastest way to contribute
 
-1. Go to **[OpenLabor/community](https://github.com/OpenLabor/community)**
+1. Go to **[OpenLabor/openlabor](https://github.com/OpenLabor/openlabor)**
 2. Navigate to the folder (`employees/`, `skills/`, or `missions/`)
 3. Click **"Add file" > "Create new file"** right in your browser
 4. Name it (e.g. `skills/seo-auditor/SKILL.md`)
@@ -150,7 +150,7 @@ Community contributions are MIT licensed. Use them however you want.
 ---
 
 <p align="center">
-  <a href="https://openlabor.ai">openlabor.ai</a> &bull; <a href="https://labor.so">labor.so</a> &bull; <a href="https://github.com/OpenLabor/community">community</a>
+  <a href="https://openlabor.ai">openlabor.ai</a> &bull; <a href="https://labor.so">labor.so</a> &bull; <a href="https://github.com/OpenLabor/openlabor">openlabor</a>
   <br><br>
   <sub>Built by <a href="https://github.com/yoanndefay">@yoanndefay</a> and the open source community</sub>
 </p>
