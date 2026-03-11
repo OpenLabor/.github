@@ -1,8 +1,8 @@
-<h1 align="center">
-  <br>
-  OpenLabor
-  <br>
-</h1>
+<p align="center">
+  <a href="https://labor.so">
+    <img src="https://labor.so/images/og.png" alt="OpenLabor — Hire AI Employees" width="100%">
+  </a>
+</p>
 
 <p align="center">
   <strong>Open source AI employees you can hire, customize, and put to work.</strong>
